@@ -1,0 +1,28 @@
+vdel -lib $HOME/Desktop/Projet2A/z_buffer_lib
+vlib z_buffer_lib
+vmap z_buffer_lib $HOME/Desktop/Projet2A/z_buffer_lib
+vcom +acc -work z_buffer_lib rtl/gensync.vhd
+vlog +acc -work z_buffer_lib rtl/b1/fsm_b1.sv
+vlog +acc -work z_buffer_lib bench/test_fsm_b1.sv
+vlog +acc -work z_buffer_lib rtl/b1/initiator.sv
+vlog +acc -work z_buffer_lib bench/test_initiator.sv
+vlog +acc -work z_buffer_lib rtl/bresenham_fill.sv
+vlog +acc -work z_buffer_lib bench/test_b2.sv
+vlog +acc -work z_buffer_lib rtl/simple_ram_dual_clock.v
+vlog +acc -work z_buffer_lib bench/test_ram.sv
+vlog +acc -work z_buffer_lib bench/test_ram_b2.sv
+vlog +acc -work z_buffer_lib rtl/b1/bresenham_line.sv
+vlog +acc -work z_buffer_lib bench/test_bresenham_line.sv
+vlog +acc -work z_buffer_lib rtl/top.sv
+vlog +acc -work z_buffer_lib rtl/b1/b1.sv
+vlog +acc -work z_buffer_lib bench/test_top.sv
+vlog +acc -work z_buffer_lib rtl/starter.sv
+vlog +acc -work z_buffer_lib bench/test_starter.sv
+vlog +acc -work z_buffer_lib rtl/b2.sv
+vlog +acc -work z_buffer_lib rtl/b2_with_z.sv
+vlog +acc -work z_buffer_lib bench/test_b2_without_z.sv
+vlog +acc -work z_buffer_lib bench/test_b2_with_z.sv
+vlog +acc -work z_buffer_lib rtl/rom_a.sv
+vlog +acc -work z_buffer_lib rtl/rom_b.sv
+vlog +acc -work z_buffer_lib rtl/rom_c.sv
+vlog +acc -work z_buffer_lib rtl/rom_rgb.sv

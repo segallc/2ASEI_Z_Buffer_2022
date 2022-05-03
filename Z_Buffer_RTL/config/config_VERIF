@@ -1,0 +1,32 @@
+#! /bin/bash 
+# -*- coding: UTF-8 -*-
+###########################################################################################
+# Script de configuration pour 
+#   - la simulation 
+#       ModelSim de Mentor Graphics
+#   - la synthèse sur Asic avec 
+#       Design Vision de Synosys
+#   - l'étude de tracé de cellules standards avec CDS IC de Cadence (= Virtuoso)
+#   - le placement et le routage sur Asic avec
+#       EDI System (= SoC Encounter) de Cadence  
+#       le kit technologique (design kit) d'Austria Micro System (AMS)
+# –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# Il est attendu que le présent script soit placé dans le sous-répertoire "config" de 
+# l'arborescence du TP. La base de l'arborescence du TP est donc le répertoire parent du 
+# répertoire contenant ce script. Le chemin complet (absolu) de la base de l'arborescence 
+# est déterminé par le script
+# /tp/outils/cheminduparent
+#
+# ATTENTION 
+# Pour toujours obtenir le nom d'un script à l'intérieur de celui-ci, qu'il soit exécuté ou 
+# sourcé, il convient d'utiliser la variable d'environnement $BASH_SOURCE. En effet, $0 
+# retourne le nom de l'interpréteur de commandes utilisé. Le résultat est donc différent
+# selon que le script est exécuté ou sourcé.
+###########################################################################################
+
+export TP_PATH=$(/tp/outils/cheminduparent $BASH_SOURCE)
+printf "\nTP_PATH (base de l'arborescence du TP) = \n%s\n\n" "$TP_PATH"
+
+source /softslin/configCAO/Atrenta/config_Spyglass
+source /softslin/configCAO/Atrenta/licence_atrenta
+
